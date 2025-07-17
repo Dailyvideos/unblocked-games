@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Unblocked Games</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&family=Press+Start+2P&display=swap" rel="stylesheet">
+
+  <!-- jQuery from Google Hosted Libraries -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+  <!-- Material Design Lite (from Google APIs) -->
+  <link rel="stylesheet" href="https://code.getmdl.io/1.3.0/material.indigo-pink.min.css" />
+  <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
+
+  <!-- Material Icons -->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
+
+  <style>
+    name, description, games, game {
+      display: block;
+    }
+
+    name {
+      font-family: 'Press Start 2P', cursive;
+      font-size: 2.2rem;
+      text-align: center;
+      margin-bottom: 20px;
+      color: inherit;
+    }
+
+    description {
+      font-family: 'Rubik', sans-serif;
+      font-size: 1rem;
+      text-align: center;
+      max-width: 600px;
+      margin: 0 auto 20px auto;
+      line-height: 1.6;
+      color: inherit;
+    }
+
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Rubik', sans-serif;
+      background-color: #121212;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      transition: background 0.5s ease, color 0.5s ease;
+    }
+
+    .mdl-button {
+      margin: 20px;
+    }
+
+    .light-mode {
+      background-color: #f9f9f9;
+      color: #1b1b1b;
+    }
+
+    .light-mode .mdl-button--raised {
+      background-color: #e0e0e0;
+      color: #1b1b1b;
+    }
+
+    .mdl-button .material-icons {
+      margin-right: 6px;
+      vertical-align: middle;
+    }
+
+    games {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+      padding: 20px;
+      width: 90%;
+      max-width: 1000px;
+    }
+
+    game {
+      background: #1e1e1e;
+      padding: 15px;
+      border-radius: 12px;
+      text-align: center;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+      transition: transform 0.3s ease;
+    }
+
+    game:hover {
+      transform: scale(1.03);
+    }
+
+    game name {
+      font-size: 1rem;
+      margin: 10px 0;
+    }
+
+    game description {
+      font-size: 0.875rem;
+      opacity: 0.8;
+    }
+
+    game a {
+      display: block;
+      text-decoration: none;
+    }
+
+    game img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+      transition: opacity 0.3s ease;
+    }
+
+    game a:hover img {
+      opacity: 0.9;
+    }
+  </style>
+</head>
+<body>
+
+  <name>Unblocked Games</name>
+
+  <description>
+    Play tons of unblocked games at school or work without restrictions. Fast, fun, and always available!
+  </description>
+
+  <button id="toggleTheme" class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect mdl-button--accent">
+    <i class="material-icons">brightness_6</i> Toggle Theme
+  </button>
+
+  <games>
+    <game>
+      <a href="https://example.com/chrome-dino" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/4/45/Google_Dino_Chrome_game.png" alt="Dino Game">
+      </a>
+      <name>Chrome Dino</name>
+      <description>Jump and dodge in this offline runner game from Chrome.</description>
+    </game>
+    <game>
+      <a href="https://example.com/slope" target="_blank">
+        <img src="https://i.ytimg.com/vi/FWfJkO84XZA/maxresdefault.jpg" alt="Slope Game">
+      </a>
+      <name>Slope</name>
+      <description>Control a fast-rolling ball through a futuristic slope world.</description>
+    </game>
+    <game>
+      <a href="https://example.com/minecraft-classic" target="_blank">
+        <img src="https://upload.wikimedia.org/wikipedia/en/0/0e/Minecraft_Cover_Art.png" alt="Minecraft">
+      </a>
+      <name>Minecraft Classic</name>
+      <description>The classic blocky sandbox game right in your browser.</description>
+    </game>
+  </games>
+
+  <script>
+    $('#toggleTheme').click(function () {
+      $('body').toggleClass('light-mode');
+    });
+  </script>
+
+</body>
+</html>
